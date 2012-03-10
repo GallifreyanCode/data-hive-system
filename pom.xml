@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>be.gallifreyan.code</groupId>
+	<artifactId>data-hive-system</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<java.version>1.6</java.version>
+		<jar.plugin.version>2.4</jar.plugin.version>
+		<jpa.spec.version>1.1</jpa.spec.version>
+		<spring.version>3.1.1.RELEASE</spring.version>
+		<slf4j.version>1.6.4</slf4j.version>
+		<logback.version>1.0.0</logback.version>
+		<junit.version>4.10</junit.version>
+		<parent.version>${project.version}</parent.version>
+		<clean.plugin.version>2.4.1</clean.plugin.version>
+		<dependency.plugin.version>2.4</dependency.plugin.version>
+		<assembly.plugin.version>2.2.2</assembly.plugin.version>
+	</properties>
+
+	<modules>
+		<module>data-hive-system-api</module>
+		<module>data-hive-system-client</module>
+		<module>data-hive-system-flavour</module>
+		<module>data-hive-system-package</module>
+		<module>data-hive-system-persistence</module>
+		<module>data-hive-system-util</module>
+		<module>data-hive-system-web</module>
+		<module>data-hive-system-spring</module>
+		<module>data-hive-system-logging</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Modules -->
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-api</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-persistence</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-spring</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-logging</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- TODO: No direct dependencies -->
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-flavour-music</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-flavour-film</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-flavour-book</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- Global Dependencies -->
+			<dependency>
+				<groupId>org.apache.geronimo.specs</groupId>
+				<artifactId>geronimo-jpa_2.0_spec</artifactId>
+				<version>${jpa.spec.version}</version>
+			</dependency>
+			<!-- Logging Dependencies -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-core</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+						<showDeprecation>true</showDeprecation>
+						<showWarnings>true</showWarnings>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${jar.plugin.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
