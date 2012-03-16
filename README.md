@@ -1,6 +1,6 @@
 # Data Hive System #
-### Goal ###
-### Technologies ###
+## Goal ##
+## Technologies ##
 ## Downloading / Installation ##
 ## Documentation ##
 ## Building ##
