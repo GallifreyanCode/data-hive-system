@@ -1,4 +1,4 @@
-## Data Hive benben System ##
+## Data Hive System ##
 
 ### Goal ###
 Create a back-end system that can be reused and implemented in multiple domains.
