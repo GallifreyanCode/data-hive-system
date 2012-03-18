@@ -1,4 +1,4 @@
-package be.dhs.api.role;
+package be.dhs.api.role.entity;
 
 import be.dhs.api.Entity;
 

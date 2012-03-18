@@ -4,11 +4,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.NoRepositoryBean;
 
-import be.dhs.api.role.Component;
+import be.dhs.api.role.entity.Creation;
 
 /**
- * Repository interface for Component. This is not the repository bean to be used.
- * A proxy interface is used to pass AbstractComponent instead of Component objects.<br>
+ * Repository interface for Creation. This is not the repository bean to be used.
+ * A proxy interface is used to pass AbstractCreation instead of Creation objects.<br>
  * TODO: This is a work in progress.<br>
  * TODO: Remove double code.
  * @author	GallifreyanCode
@@ -16,6 +16,6 @@ import be.dhs.api.role.Component;
  * @see	<a href="http://forum.springsource.org/showthread.php?120993-Entity-not-found-in-JpaRepository-when-using-generics">Spring Forum Issue</a>
  */
 @NoRepositoryBean
-public interface ComponentRepo<T extends Component> extends JpaSpecificationExecutor<T>, JpaRepository<T, Long> {
+public interface CreationRepo<T extends Creation> extends JpaSpecificationExecutor<T>, JpaRepository<T, Long> {
     T findByName(final String name);
 }

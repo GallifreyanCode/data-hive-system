@@ -49,6 +49,16 @@
 			</dependency>
 			<dependency>
 				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-persistence-jpa</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-persistence-mongo</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
 				<artifactId>data-hive-system-spring</artifactId>
 				<version>${project.version}</version>
 			</dependency>

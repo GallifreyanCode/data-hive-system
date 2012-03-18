@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.NoRepositoryBean;
 
-import be.dhs.api.role.Creator;
+import be.dhs.api.role.entity.Creator;
 
 /**
  * Repository interface for Creator. This is not the repository bean to be used.

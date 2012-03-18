@@ -20,7 +20,7 @@
 		<!-- Test Dependencies -->
 		<dependency>
 			<groupId>be.gallifreyan.code</groupId>
-			<artifactId>data-hive-system-persistence</artifactId>
+			<artifactId>data-hive-system-persistence-jpa</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

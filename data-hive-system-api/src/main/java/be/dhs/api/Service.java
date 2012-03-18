@@ -2,7 +2,7 @@ package be.dhs.api;
 
 import java.util.List;
 
-import be.dhs.api.role.Creator;
+import be.dhs.api.role.entity.Creator;
 
 /**
  * @deprecated at the moment
