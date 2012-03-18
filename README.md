@@ -18,3 +18,4 @@ It serves as a sandbox environment to experiment with new features and technolog
 ### Downloading / Installation ###
 ### Building ###
 ### Future ###
+* Evolve to OSGi-enabled packaging
