@@ -1,4 +1,4 @@
-## Data Hive System ##
+## Data Hive benben System ##
 
 ### Goal ###
 Create a back-end system that can be reused and implemented in multiple domains.
@@ -15,7 +15,7 @@ It serves as a sandbox environment to experiment with new features and technolog
 * Swing client
 * Web client
 
-Test test test
+
 
 ### Downloading / Installation ###
 ### Building ###
