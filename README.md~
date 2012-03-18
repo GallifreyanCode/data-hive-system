@@ -1,4 +1,4 @@
-## Data Hive benben System ##
+## Data Hive System ##
 
 ### Goal ###
 Create a back-end system that can be reused and implemented in multiple domains.
@@ -14,8 +14,6 @@ It serves as a sandbox environment to experiment with new features and technolog
 * [Liquibase](http://www.liquibase.org/) database versioning
 * Swing client
 * Web client
-
-
 
 ### Downloading / Installation ###
 ### Building ###
