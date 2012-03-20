@@ -1,4 +1,4 @@
-package be.dhs.flavor.music;
+package be.dhs.flavour.music;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
@@ -10,10 +10,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-import be.dhs.flavor.music.Album;
-import be.dhs.flavor.music.Artist;
+import be.dhs.flavour.music.Album;
+import be.dhs.flavour.music.Artist;
 import be.dhs.persistence.repo.CreationRepo;
 import be.dhs.persistence.repo.CreatorRepo;
+import be.dhs.spring.application.ContextConfig;
 import be.dhs.spring.persistence.PersistenceJPAConfig;
 
 /** Fast created tests to act as proof of concept.
@@ -21,9 +22,9 @@ import be.dhs.spring.persistence.PersistenceJPAConfig;
  * @version	0
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ImportResource("classpath*:contextConfig.xml")
-@ComponentScan({ "be.gallifreyan.code.dhs" })
-@ContextConfiguration(classes = { PersistenceJPAConfig.class }, loader = AnnotationConfigContextLoader.class)
+/*@ImportResource("classpath*:contextConfig.xml")
+@ComponentScan({ "be.dhs" })*/
+@ContextConfiguration(classes = {ContextConfig.class, PersistenceJPAConfig.class}, loader = AnnotationConfigContextLoader.class)
 public class TestingMusic {
 
 	@Autowired

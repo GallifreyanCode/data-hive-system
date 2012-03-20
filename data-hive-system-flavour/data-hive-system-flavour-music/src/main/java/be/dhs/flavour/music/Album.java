@@ -1,4 +1,4 @@
-package be.dhs.flavor.music;
+package be.dhs.flavour.music;
 
 import be.dhs.persistence.abs.AbstractCreation;
 

@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JTextField;
 /**
- * Controller Façade for UI.
+ * Controller Faï¿½ade for UI.
  * It elimintes crazy dependencies and restricts UI interactions.
  * @author	GallifreyanCode
  * @version	0.0.1-alpha

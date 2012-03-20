@@ -3,7 +3,7 @@ package be.dhs.client.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import be.dhs.flavor.music.Artist;
+import be.dhs.flavour.music.Artist;
 import be.dhs.persistence.repo.CreatorRepo;
 /**
  * Just a test.

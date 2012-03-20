@@ -1,4 +1,4 @@
-package be.dhs.flavor.film;
+package be.dhs.flavour.film;
 
 import javax.persistence.Entity;
 

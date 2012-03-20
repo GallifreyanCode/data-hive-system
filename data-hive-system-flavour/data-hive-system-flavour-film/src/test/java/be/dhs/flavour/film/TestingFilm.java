@@ -1,4 +1,4 @@
-package be.dhs.flavor.film;
+package be.dhs.flavour.film;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -14,10 +14,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-import be.dhs.flavor.film.Director;
-import be.dhs.flavor.film.Film;
+import be.dhs.flavour.film.Director;
+import be.dhs.flavour.film.Film;
 import be.dhs.persistence.repo.CreationRepo;
 import be.dhs.persistence.repo.CreatorRepo;
+import be.dhs.spring.application.ContextConfig;
 import be.dhs.spring.persistence.PersistenceJPAConfig;
 
 /** Fast created tests to act as proof of concept.
@@ -25,9 +26,7 @@ import be.dhs.spring.persistence.PersistenceJPAConfig;
  * @version	0
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ImportResource("classpath*:contextConfig.xml")
-@ComponentScan({ "be.gallifreyan.code.dhs" })
-@ContextConfiguration(classes = { PersistenceJPAConfig.class }, loader = AnnotationConfigContextLoader.class)
+@ContextConfiguration(classes = {ContextConfig.class, PersistenceJPAConfig.class}, loader = AnnotationConfigContextLoader.class)
 public class TestingFilm {
 	private static final Logger logger = LoggerFactory.getLogger(TestingFilm.class);
 	@Autowired

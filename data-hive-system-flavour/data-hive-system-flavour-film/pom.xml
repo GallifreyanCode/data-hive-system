@@ -18,15 +18,20 @@
 			<artifactId>data-hive-system-logging</artifactId>
 		</dependency>
 		<!-- Test Dependencies -->
+	
 		<dependency>
 			<groupId>be.gallifreyan.code</groupId>
 			<artifactId>data-hive-system-persistence-jpa</artifactId>
-			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.hibernate.javax.persistence</groupId>
+					<artifactId>hibernate-jpa-2.0-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>be.gallifreyan.code</groupId>
 			<artifactId>data-hive-system-spring</artifactId>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

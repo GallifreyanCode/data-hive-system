@@ -24,7 +24,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @ImportResource( "classpath*:*springDataConfig.xml" )
-@ComponentScan( { "be.gallifreyan.code.dhs" } )
+@ComponentScan( { "be.dhs" } )
 public class PersistenceJPAConfig {
     @Value( "${jdbc.driverClassName}" ) private String driverClassName;
     @Value( "${jdbc.url}" ) private String url;
@@ -45,7 +45,7 @@ public class PersistenceJPAConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(){
         final LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
         factoryBean.setDataSource( getDataSource() );
-        factoryBean.setPackagesToScan( new String[ ] { "be.gallifreyan.code.dhs.flavor" } );
+        factoryBean.setPackagesToScan( new String[ ] { "be.dhs.flavour" } );
 
         final JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter(){
             {
@@ -65,10 +65,12 @@ public class PersistenceJPAConfig {
     @Bean
     public DataSource getDataSource(){
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName( driverClassName );
-        dataSource.setUrl( url );
-        dataSource.setUsername( "kim" );
-        dataSource.setPassword( "8svcXUwGPjZHdVmV" );
+        dataSource.setDriverClassName(driverClassName);
+        dataSource.setUrl(url);
+        /*dataSource.setUsername("kim");
+        dataSource.setPassword("8svcXUwGPjZHdVmV");*/
+        dataSource.setUsername("sa");
+        dataSource.setPassword("");
         return dataSource;
     }
 

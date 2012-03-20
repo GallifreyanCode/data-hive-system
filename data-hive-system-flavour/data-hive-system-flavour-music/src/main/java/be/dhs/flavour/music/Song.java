@@ -1,4 +1,5 @@
-package be.dhs.flavor.music;
+package be.dhs.flavour.music;
+
 
 import javax.persistence.Entity;
 
