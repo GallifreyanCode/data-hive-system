@@ -6,8 +6,8 @@ It serves as a sandbox environment to experiment with new features and technolog
 
 ### Technologies ###
 * [Maven](http://maven.apache.org/) builds
-* [Spring 3](http://www.springsource.org/), with features such as NoXML
-* [Spring Data](http://www.springsource.org/spring-data) for JPA and NoSQL data acces
+* [Spring 3](http://www.springsource.org/), with features such as no XML bean configuration
+* [Spring Data](http://www.springsource.org/spring-data) for JPA and NoSQL data access
 * [MySQL](http://www.mysql.com/) database
 * [HyperSQL](http://hsqldb.org/) in-memory database
 * [MongoDB](http://www.mongodb.org/) document-oriented NoSQL database
