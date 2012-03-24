@@ -2,7 +2,6 @@ package be.dhs.flavour.music.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import be.dhs.api.role.service.CreationService;
 import be.dhs.flavour.music.Album;

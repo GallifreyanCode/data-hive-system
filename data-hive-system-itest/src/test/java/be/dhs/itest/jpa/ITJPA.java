@@ -3,14 +3,9 @@ package be.dhs.itest.jpa;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
-
 import be.dhs.flavour.film.Director;
 import be.dhs.flavour.film.Film;
 import be.dhs.flavour.film.service.DirectorService;
@@ -19,17 +14,13 @@ import be.dhs.flavour.music.Album;
 import be.dhs.flavour.music.Artist;
 import be.dhs.flavour.music.service.AlbumService;
 import be.dhs.flavour.music.service.ArtistService;
-import be.dhs.spring.application.ContextConfig;
-import be.dhs.spring.persistence.PersistenceJPAConfig;
 
 /** Fast created tests to act as proof of concept.
  * @author	GallifreyanCode
  * @version	0
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {ContextConfig.class, PersistenceJPAConfig.class}, loader = AnnotationConfigContextLoader.class)
-public class IntegrationTesting {
-	private static final Logger logger = LoggerFactory.getLogger(IntegrationTesting.class);
+public class ITJPA extends AbstractJPATest {
+	private static final Logger logger = LoggerFactory.getLogger(ITJPA.class);
 
 	@Autowired DirectorService directorService;
 	@Autowired ArtistService artistService;

@@ -32,6 +32,11 @@
 				<artifactId>data-hive-system-client-ui-main</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-client-controller</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 </project>

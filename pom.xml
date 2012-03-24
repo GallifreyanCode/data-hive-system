@@ -18,6 +18,7 @@
 		<logback.version>1.0.0</logback.version>
 		<junit.version>4.10</junit.version>
 		<parent.version>${project.version}</parent.version>
+		<failsafe.plugin.version>2.12</failsafe.plugin.version>
 		<compiler.plugin.version>2.3.2</compiler.plugin.version>
 		<clean.plugin.version>2.4.1</clean.plugin.version>
 		<dependency.plugin.version>2.4</dependency.plugin.version>
@@ -32,6 +33,7 @@
 		<module>data-hive-system-persistence</module>
 		<module>data-hive-system-util</module>
 		<module>data-hive-system-web</module>
+		<module>data-hive-system-itest</module>
 		<module>data-hive-system-spring</module>
 		<module>data-hive-system-logging</module><!-- 
 		<module>data-hive-system-rest</module>
