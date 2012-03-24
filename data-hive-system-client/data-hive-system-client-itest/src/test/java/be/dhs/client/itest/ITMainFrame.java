@@ -12,7 +12,7 @@ public class ITMainFrame extends AbstractClientTest {
         window.requireSize(expectedSize);
     }
 
-    @Test
+	@Test
     public void testDefaultSize3() throws Exception {
             Dimension expectedSize = new Dimension(800, 600);
             window.requireSize(expectedSize);
