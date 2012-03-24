@@ -16,7 +16,6 @@
 		<hibernate.version>3.6.8.Final</hibernate.version>
 		<hsqldb.version>1.8.0.10</hsqldb.version>
 		<mysql.driver.version>5.1.18</mysql.driver.version>
-		<spring.data.jpa.version>1.0.1.RELEASE</spring.data.jpa.version>
 	</properties>
 
 	<dependencies>
@@ -26,8 +25,19 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons-core</artifactId>
+			<version>${spring.data.commons.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
 			<version>${spring.data.jpa.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.data</groupId>
+					<artifactId>spring-data-commons-core</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>

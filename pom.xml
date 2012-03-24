@@ -9,7 +9,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.6</java.version>
 		<jar.plugin.version>2.4</jar.plugin.version>
 		<jpa.spec.version>1.1</jpa.spec.version>
@@ -18,6 +18,7 @@
 		<logback.version>1.0.0</logback.version>
 		<junit.version>4.10</junit.version>
 		<parent.version>${project.version}</parent.version>
+		<compiler.plugin.version>2.3.2</compiler.plugin.version>
 		<clean.plugin.version>2.4.1</clean.plugin.version>
 		<dependency.plugin.version>2.4</dependency.plugin.version>
 		<assembly.plugin.version>2.2.2</assembly.plugin.version>
@@ -32,7 +33,9 @@
 		<module>data-hive-system-util</module>
 		<module>data-hive-system-web</module>
 		<module>data-hive-system-spring</module>
-		<module>data-hive-system-logging</module>
+		<module>data-hive-system-logging</module><!-- 
+		<module>data-hive-system-rest</module>
+		<module>data-hive-system-springmvc</module> -->
 	</modules>
 
 	<dependencyManagement>
@@ -84,6 +87,11 @@
 				<artifactId>data-hive-system-flavour-book</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-flavour-music-mongodb</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 			<!-- Global Dependencies -->
 			<dependency>
 				<groupId>org.apache.geronimo.specs</groupId>
@@ -110,13 +118,12 @@
 	</dependencyManagement>
 
 	<build>
-
 		<pluginManagement>
 			<plugins>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-                    <version>2.3.2</version>
+					<version>${compiler.plugin.version}</version>
 					<configuration>
 						<source>${java.version}</source>
 						<target>${java.version}</target>

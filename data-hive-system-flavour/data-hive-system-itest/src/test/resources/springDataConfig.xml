@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
     http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-    <!-- Search only specific JPA packages, it will detect the mongo stuff and throw exceptions such as "Not a managed type" -->
+	<!-- Search only specific JPA packages, it will detect the mongo stuff and throw exceptions such as "Not a managed type" -->
     <jpa:repositories base-package="be.dhs.persistence.repo" />
 
 </beans>

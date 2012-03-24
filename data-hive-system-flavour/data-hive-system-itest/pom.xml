@@ -1,21 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>be.gallifreyan.code</groupId>
 		<artifactId>data-hive-system-flavour</artifactId>
+		<groupId>be.gallifreyan.code</groupId>
 		<version>1.0</version>
 	</parent>
 	<groupId>be.gallifreyan.code</groupId>
-	<artifactId>data-hive-system-flavour-music</artifactId>
+	<artifactId>data-hive-system-itest</artifactId>
 	<version>1.0</version>
-	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>be.gallifreyan.code</groupId>
-			<artifactId>data-hive-system-logging</artifactId>
+			<artifactId>data-hive-system-flavour-book</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>be.gallifreyan.code</groupId>
+			<artifactId>data-hive-system-flavour-film</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>be.gallifreyan.code</groupId>
+			<artifactId>data-hive-system-flavour-music</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>be.gallifreyan.code</groupId>
+			<artifactId>data-hive-system-flavour-music-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>be.gallifreyan.code</groupId>
+			<artifactId>data-hive-system-persistence-mongo</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
@@ -28,6 +42,16 @@
 				<exclusion>
 					<groupId>org.hibernate.javax.persistence</groupId>
 					<artifactId>hibernate-jpa-2.0-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>be.gallifreyan.code</groupId>
+			<artifactId>data-hive-system-spring</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.geronimo.specs</groupId>
+					<artifactId>geronimo-jpa_2.0_spec</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>

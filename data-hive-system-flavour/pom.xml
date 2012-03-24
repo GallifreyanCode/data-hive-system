@@ -16,5 +16,27 @@
 		<module>data-hive-system-flavour-book</module>
 		<module>data-hive-system-flavour-film</module>
 		<module>data-hive-system-flavour-music</module>
+		<module>data-hive-system-itest</module>
+		<module>data-hive-system-flavour-music-mongodb</module>
 	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-flavour-book</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-flavour-film</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>be.gallifreyan.code</groupId>
+				<artifactId>data-hive-system-flavour-music</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>

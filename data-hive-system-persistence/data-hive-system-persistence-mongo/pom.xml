@@ -12,18 +12,22 @@
 
 	<properties>
 		<cglib.version>2.2.2</cglib.version>
-		<hibernate.version>3.6.8.Final</hibernate.version>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>be.gallifreyan.code</groupId>
 			<artifactId>data-hive-system-api</artifactId>
 		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.mongodb</groupId> -->
+<!-- 			<artifactId>mongo-java-driver</artifactId> -->
+<!-- 			<version>2.7.3</version> -->
+<!-- 		</dependency> -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-mongodb</artifactId>
-			<version>1.0.0.RELEASE</version>
+			<version>${spring.data.mongo.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework.data</groupId>
@@ -34,7 +38,7 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-commons-core</artifactId>
-			<version>1.2.0.RELEASE</version>
+			<version>${spring.data.commons.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>cglib</groupId>

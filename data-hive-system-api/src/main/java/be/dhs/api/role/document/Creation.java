@@ -1,7 +1,7 @@
 package be.dhs.api.role.document;
 
-import be.dhs.api.DocumentEntity;
+import be.dhs.api.EntityDocument;
 
-public interface Creation extends DocumentEntity {
+public interface Creation extends EntityDocument {
 
 }

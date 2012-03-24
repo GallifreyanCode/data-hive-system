@@ -8,5 +8,4 @@
         classpath*:*persistence-hsqldb.properties,
         classpath*:*env-production.properties" />
        <context:annotation-config />
-	<context:component-scan base-package="be" />
 </beans>
