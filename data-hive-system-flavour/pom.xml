@@ -19,6 +19,13 @@
 		<module>data-hive-system-flavour-music-mongodb</module>
 	</modules>
 
+	<dependencies>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+		</dependency>
+	</dependencies>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

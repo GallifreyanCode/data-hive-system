@@ -2,7 +2,7 @@ package be.dhs.flavour.music;
 
 import javax.persistence.Entity;
 
-import be.dhs.persistence.abs.AbstractCreator;
+import be.dhs.persistence.entity.abs.AbstractCreator;
 
 /** Artist entity object from the music flavour.
  * @author	GallifreyanCode
@@ -14,5 +14,14 @@ public class Artist extends AbstractCreator {
 
 	public Artist(){
         super();
+		setType(getClass().getSimpleName());
     }
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
 }

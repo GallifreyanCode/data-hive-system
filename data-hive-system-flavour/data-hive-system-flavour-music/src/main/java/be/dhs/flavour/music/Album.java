@@ -1,8 +1,8 @@
 package be.dhs.flavour.music;
 
-import be.dhs.persistence.abs.AbstractCreation;
-
 import javax.persistence.Entity;
+
+import be.dhs.persistence.entity.abs.AbstractCreation;
 
 /** Album entity object from the music flavour.
  * @author	GallifreyanCode
@@ -14,6 +14,14 @@ public class Album extends AbstractCreation {
 
 	public Album(){
 		super();
+		setType(getClass().getSimpleName());
+	}
+	
+	public String getType() {
+		return type;
 	}
 
+	public void setType(String type) {
+		this.type = type;
+	}
 }

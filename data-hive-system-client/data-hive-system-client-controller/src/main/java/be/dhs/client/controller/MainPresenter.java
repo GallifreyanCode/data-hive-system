@@ -1,15 +1,20 @@
 package be.dhs.client.controller;
 
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
+
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
+import javax.inject.Inject;
+import javax.inject.Named;
+import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.stereotype.Controller;
 
-import be.dhs.client.api.IController;
+import be.dhs.client.api.IPresenter;
 import be.dhs.client.ui.main.MainFrame;
 
 /**
@@ -18,8 +23,8 @@ import be.dhs.client.ui.main.MainFrame;
  * @author GallifreyanCode
  * @version 0
  */
-@Controller
-public class MainController implements IController {
+@Named
+public class MainPresenter implements IPresenter {
 	@SuppressWarnings("unused")
 	private AnnotationConfigApplicationContext context;
 	private MainFrame mainFrame;
@@ -28,7 +33,7 @@ public class MainController implements IController {
 	/**
 	 * Default constructor that creates an instance of the MainFrame.
 	 */
-	public MainController() {
+	public MainPresenter() {
 		mainFrame = new MainFrame(this);
 	}
 
@@ -36,7 +41,7 @@ public class MainController implements IController {
 	 * @deprecated
 	 * @since MainController is Spring managed bean
 	 */
-	public MainController(AnnotationConfigApplicationContext context) {
+	public MainPresenter(AnnotationConfigApplicationContext context) {
 		/*
 		 * TODO: Better solution for this context loading and debug logging of
 		 * bean def
@@ -54,6 +59,11 @@ public class MainController implements IController {
 	 */
 	public void start() {
 		mainFrame.setDimension(800, 600).setCentered().addMusicFlavor();
+	}
+	
+	public void stop() {
+		WindowEvent wev = new WindowEvent(mainFrame, WindowEvent.WINDOW_CLOSING);
+        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(wev);
 	}
 
 	/**
@@ -96,7 +106,7 @@ public class MainController implements IController {
 	 * @param serviceClass
 	 *            : {@link ServiceClass} object
 	 */
-	@Autowired
+	@Inject
 	public void setServiceClass(ServiceClass serviceClass) {
 		this.serviceClass = serviceClass;
 	}

@@ -18,4 +18,5 @@ public interface Entity {
     void setVersion(Integer version);
     String getName();
     void setName(String name);    
+    String getType();
 }

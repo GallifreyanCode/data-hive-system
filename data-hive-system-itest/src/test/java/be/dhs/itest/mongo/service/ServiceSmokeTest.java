@@ -1,4 +1,4 @@
-package be.dhs.itest.mongo;
+package be.dhs.itest.mongo.service;
 
 import static org.junit.Assert.assertEquals;
 
@@ -7,8 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import be.dhs.flavour.music.mongo.Artist;
 import be.dhs.flavour.music.mongo.service.MongoArtistService;
+import be.dhs.itest.mongo.AbstractMongoTest;
 
-public class ITMongo extends AbstractMongoTest {
+public class ServiceSmokeTest extends AbstractMongoTest {
 	
 	@Autowired MongoArtistService artistService;
 

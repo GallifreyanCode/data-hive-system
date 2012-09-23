@@ -1,4 +1,4 @@
-package be.dhs.persistence.abs;
+package be.dhs.persistence.entity.abs;
 
 import java.io.Serializable;
 
@@ -10,11 +10,11 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Version;
 
-import be.dhs.api.role.entity.Creator;
+import be.dhs.api.role.entity.Component;
 
 /**
- * Abstract implementation of Creator.
- * It enables to pass concrete Creator behavior to subclasses.<br>
+ * Abstract implementation of Component.
+ * It enables to pass concrete Component behavior to subclasses.<br>
  * TODO: Extract common behavior from abstract classes in the future,
  * only specifics should remain.
  * @author	GallifreyanCode
@@ -23,16 +23,17 @@ import be.dhs.api.role.entity.Creator;
 // @MappedSuperclass
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public abstract class AbstractCreator implements Creator, Serializable {
-	private static final long serialVersionUID = -921659289676154720L;
+public abstract class AbstractComponent implements Component, Serializable {
+	private static final long serialVersionUID = 5629853708214834899L;
 
 	@Id @GeneratedValue(strategy=GenerationType.TABLE)
 	private Long id;
 	@Version
 	private Integer version;
 	private String name;
+	protected String type;
 
-	public AbstractCreator() {
+	public AbstractComponent() {
 
 	}
 
@@ -43,7 +44,7 @@ public abstract class AbstractCreator implements Creator, Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+	
 	public Integer getVersion() {
 		return version;
 	}
@@ -59,4 +60,8 @@ public abstract class AbstractCreator implements Creator, Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public abstract String getType();
+
+	public abstract  void setType(String type);
 }

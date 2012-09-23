@@ -1,5 +1,7 @@
 package be.dhs.client.ui.main;
 
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -10,7 +12,7 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import be.dhs.client.api.IController;
+import be.dhs.client.api.IPresenter;
 /**
  * This is the main frame of the application.
  * Visual components are added using a the builder pattern.
@@ -22,13 +24,14 @@ public class MainFrame extends JFrame {
 	private static final long serialVersionUID = -763491454756428767L;
 	private static final int DEFAULT_WIDTH = 200;
 	private static final int DEFAULT_HEIGHT = 200;
-	private IController mainController;
+	private IPresenter mainController;
 	private DefaultListModel flavorList;	
 	/**
 	 * Default constructor.
 	 */
-	public MainFrame(IController mainController){
+	public MainFrame(IPresenter mainController){
 		this.mainController = mainController;
+		setName(getClass().getSimpleName());
 		setDefaultSettings();
 		loadBaseUI();
 	}
@@ -112,6 +115,7 @@ public class MainFrame extends JFrame {
 	 * It can also contains predefined settings which are not overruled by custom preferences.
 	 */
 	private void setDefaultSettings(){
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
 	}
 	/**

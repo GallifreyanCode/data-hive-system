@@ -35,9 +35,8 @@
 		<module>data-hive-system-web</module>
 		<module>data-hive-system-itest</module>
 		<module>data-hive-system-spring</module>
-		<module>data-hive-system-logging</module><!-- 
-		<module>data-hive-system-rest</module>
-		<module>data-hive-system-springmvc</module> -->
+		<module>data-hive-system-logging</module><!-- <module>data-hive-system-rest</module> 
+			<module>data-hive-system-springmvc</module> -->
 	</modules>
 
 	<dependencyManagement>
@@ -116,8 +115,21 @@
 				<artifactId>logback-classic</artifactId>
 				<version>${logback.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>javax.inject</groupId>
+				<artifactId>javax.inject</artifactId>
+				<version>1</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.21</version>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<pluginManagement>

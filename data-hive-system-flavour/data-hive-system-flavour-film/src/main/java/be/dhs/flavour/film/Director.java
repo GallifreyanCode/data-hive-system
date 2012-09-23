@@ -2,7 +2,7 @@ package be.dhs.flavour.film;
 
 import javax.persistence.Entity;
 
-import be.dhs.persistence.abs.AbstractCreator;
+import be.dhs.persistence.entity.abs.AbstractCreator;
 
 /** Director entity object from the film flavour.
  * @author	GallifreyanCode
@@ -14,5 +14,14 @@ public class Director extends AbstractCreator {
 	
 	public Director(){
 		super();
+		setType(getClass().getSimpleName());
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 }

@@ -1,6 +1,6 @@
 package be.dhs.persistence.repo.abs;
 
-import be.dhs.persistence.abs.AbstractComponent;
+import be.dhs.persistence.entity.abs.AbstractComponent;
 import be.dhs.persistence.repo.ComponentRepo;
 
 /**

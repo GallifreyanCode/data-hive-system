@@ -1,6 +1,6 @@
 package be.dhs.persistence.repo.abs;
 
-import be.dhs.persistence.abs.AbstractCreation;
+import be.dhs.persistence.entity.abs.AbstractCreation;
 import be.dhs.persistence.repo.CreationRepo;
 
 /**

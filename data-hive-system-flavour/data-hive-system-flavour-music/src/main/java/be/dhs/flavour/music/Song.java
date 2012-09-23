@@ -1,9 +1,8 @@
 package be.dhs.flavour.music;
 
-
 import javax.persistence.Entity;
 
-import be.dhs.persistence.abs.AbstractComponent;
+import be.dhs.persistence.entity.abs.AbstractComponent;
 
 /** Song entity object from the music flavour.
  * @author	GallifreyanCode
@@ -15,5 +14,14 @@ public class Song extends AbstractComponent {
 
 	public Song(){
         super();
+		setType(getClass().getSimpleName());
     }
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
 }

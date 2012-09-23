@@ -1,17 +1,22 @@
 package be.dhs.persistence.repo.service.abs;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import be.dhs.api.role.entity.Creator;
+import be.dhs.api.role.service.CreatorService;
 import be.dhs.persistence.repo.CreatorRepo;
-import be.dhs.persistence.repo.service.CreatorService;
 
 public abstract class AbstractCreatorService<T extends Creator> implements CreatorService<T> {
 	
-	@Autowired
 	private CreatorRepo<T> creatorRepo;
+	
+	@Autowired
+	public final void setRepo(final CreatorRepo<T> creatorRepo) {
+		this.creatorRepo = creatorRepo;
+	}
 	
 	public AbstractCreatorService(){}
 	
@@ -19,13 +24,12 @@ public abstract class AbstractCreatorService<T extends Creator> implements Creat
 		return creatorRepo.save(t);
 	}
 
-	public T find(String id) {
-		return creatorRepo.findAll().get(0);
+	public T find(Long id) {
+		return creatorRepo.findOne(id);
 	}
 
-	public void remove(String id) {
-		// TODO Auto-generated method stub
-		
+	public void remove(Long id) {
+		creatorRepo.delete(id);
 	}
 
 	public T update(T t) {
@@ -34,6 +38,21 @@ public abstract class AbstractCreatorService<T extends Creator> implements Creat
 	}
 
 	public List<T> findAll() {
-		return creatorRepo.findAll();
+		List<T> list = new ArrayList<T>();
+		for(T t : creatorRepo.findAll()) {
+			if(t.getType().equals(t.getClass().getSimpleName())) {
+				list.add(t);
+			}
+		}
+		return list;
+	}
+	
+	public T findByName(String string) {
+		for(T t : findAll()) {
+			if(t.getName().equals(string)) {
+				return t;
+			}
+		}
+		return null;
 	}
 }

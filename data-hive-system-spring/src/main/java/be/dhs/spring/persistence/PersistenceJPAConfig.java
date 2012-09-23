@@ -28,6 +28,8 @@ import java.util.Properties;
 public class PersistenceJPAConfig {
     @Value( "${jdbc.driverClassName}" ) private String driverClassName;
     @Value( "${jdbc.url}" ) private String url;
+    @Value( "${jdbc.username}" ) private String username;
+    @Value( "${jdbc.password}" ) private String password;
     @Value( "${jpa.generateDdl}" ) boolean jpaGenerateDdl;
 
     // Hibernate specific
@@ -69,8 +71,10 @@ public class PersistenceJPAConfig {
         dataSource.setUrl(url);
         /*dataSource.setUsername("kim");
         dataSource.setPassword("8svcXUwGPjZHdVmV");*/
-        dataSource.setUsername("sa");
-        dataSource.setPassword("");
+//        dataSource.setUsername("sa");
+//        dataSource.setPassword("");
+        dataSource.setUsername(username);
+        dataSource.setPassword(password);
         return dataSource;
     }
 

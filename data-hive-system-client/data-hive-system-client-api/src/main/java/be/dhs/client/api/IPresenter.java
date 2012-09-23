@@ -9,6 +9,6 @@ import javax.swing.JTextField;
  * @author	GallifreyanCode
  * @version	0.0.1-alpha
  */
-public interface IController {
+public interface IPresenter {
 	ActionListener actionAddArtist(JTextField txt);
 }
